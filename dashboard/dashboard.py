@@ -1,12 +1,10 @@
 import pandas as pd
-import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-sns.set(style="dark")
 
-Aotizhongxin_df = pd.read_csv("Aotizhongxin_df.csv")
+Aotizhongxin_df = pd.read_csv("dashboard/Aotizhongxin_df.csv")
 Aotizhongxin_df.sort_values(by="timestamp", inplace=True)
 Aotizhongxin_df.reset_index(inplace=True)
 Aotizhongxin_df["timestamp"] = pd.to_datetime(
